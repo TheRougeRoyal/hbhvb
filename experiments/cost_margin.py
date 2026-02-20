@@ -51,7 +51,7 @@ def main() -> None:
 
         dT, _ = soft_shortest_path_dag(graph, "s", "t", temps)
         gaps.append(d_star - dT)
-        bounds.append(theorem_iii_1_upper_bound(temps, n_sub, float(delta)))
+        bounds.append(theorem_iii_1_upper_bound(temps, int(n_sub), float(delta)))
 
     _write_csv(
         _results_path("cost_margin.csv"),
